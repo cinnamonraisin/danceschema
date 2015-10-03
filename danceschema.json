@@ -16,10 +16,22 @@
     "title" : "dance schema",
     "description" : "JSON schema for a structured dance",
     "properties" : {
-        "title" : { "type": "string" },
-        "author" : { "type": "string" },
-        "genre" : { "type": "string" },
-        "formation" : { "type": "string" },
+        "title" : { 
+            "type": "string",
+            "description": "The title of the dance"
+        },
+        "author" : { 
+            "type": "string",
+            "description": "Who wrote the dance, if known."
+        },
+        "genre" : {
+            "type": "string",
+            "description": "The dance genre, such as 'Contra Dance', or 'English Country Dance'."
+        },
+        "formation" : {
+            "type": "string",
+            "description": "Dance formation, such as 'Longways Duple Minor', etc."
+        },
         "key" : { "type": "string" },
         "meter" : { "type": "string" },
         "source" : { "type": "string" },
