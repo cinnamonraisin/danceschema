@@ -6,8 +6,8 @@
             "type" : "object",
             "title" : "dance moves section",
             "properties" : {
-                "section": { "type": "string" },
-                "moves": { "type": "array", "items": { "type": "string" } }
+                "label": { "type": "string" },
+                "elements": { "type": "array", "items": { "type": "string" } }
             }
         } 
     },
@@ -18,7 +18,7 @@
     "properties" : {
         "title" : { "type": "string" },
         "author" : { "type": "string" },
-        "style" : { "type": "string" },
+        "genre" : { "type": "string" },
         "formation" : { "type": "string" },
         "key" : { "type": "string" },
         "meter" : { "type": "string" },
@@ -34,5 +34,7 @@
             "description": "array of dance moves",
             "items": { "$ref": "#/definitions/DanceSection" }
         },
+
+        "required" : ["title", "genre"]
    }
 }
