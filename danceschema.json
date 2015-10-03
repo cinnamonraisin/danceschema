@@ -1,0 +1,38 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+
+    "definitions" : {
+        "DanceSection" : {
+            "type" : "object",
+            "title" : "dance moves section",
+            "properties" : {
+                "section": { "type": "string" },
+                "moves": { "type": "array", "items": { "type": "string" } }
+            }
+        } 
+    },
+
+    "type": "object",
+    "title" : "dance schema",
+    "description" : "JSON schema for a structured dance",
+    "properties" : {
+        "title" : { "type": "string" },
+        "author" : { "type": "string" },
+        "style" : { "type": "string" },
+        "formation" : { "type": "string" },
+        "key" : { "type": "string" },
+        "meter" : { "type": "string" },
+        "source" : { "type": "string" },
+        "tune": { "type": "string" },
+        "tune_source": { "type": "string" },
+        "date": { "type": "string" },
+        "authors_notes": { "type": "string" },
+
+        "moves": {
+            "type": "array",
+            "title": "dance moves",
+            "description": "array of dance moves",
+            "items": { "$ref": "#/definitions/DanceSection" }
+        },
+   }
+}
