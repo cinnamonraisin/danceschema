@@ -1,0 +1,63 @@
+{
+    "moves": [
+        {
+            "section" : "Part I"
+        },
+        {
+            "section" : "A",
+            "elements" : [ "All forward double and back twice." ]
+        },
+        {
+            "section" : "B",
+            "elements" : [ "All set and turn single twice." ]
+        },
+        {
+            "section" : "C",
+            "elements" : [ 
+                "Partners lead away from the set, change hands and lead back;",
+                "All turn single cloverleaf.",
+                "Opposites lead away from the set, change hands and lead back;",
+                "All turn single cloverleaf. "]
+        },
+        {
+            "section" : "Part II"
+        },
+        {
+            "section" : "A",
+            "elements" : [ "Partners side twice." ]
+        },
+        {
+            "section" : "B",
+            "elements" : [ "Partners set and turn single twice." ]
+        },
+        {
+            "section" : "C",
+            "elements" : [ "Repeat C of part I." ]
+        },
+        {
+            "section" : "Part III"
+        },
+        {
+            "section" : "A",
+            "elements" : [ "Partners arm right and arm left." ]
+        },
+        {
+            "section" : "B",
+            "elements" : [ "Partners set and turn single twice." ]
+        },
+        {
+            "section" : "C",
+            "elements" : [ "Repeat C of part I." ]
+        }
+    ],
+    "author": "Playford",
+    "title": "Rufty Tufty",
+    "tune_source": "",
+    "meter": "",
+    "source": "GCD Playford ball booklet, 2013",
+    "formation": "2 couple set",
+    "key": "",
+    "date": "1650",
+    "style": "english",
+    "tune": ""
+}
