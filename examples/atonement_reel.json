@@ -1,7 +1,7 @@
 {
     "moves": [
         {
-            "section" : "A1",
+            "label" : "A1",
             "elements" : [
                 "Start in circular wave, right hand to partner, men facing out",
                 "(4) Balance the wave",
@@ -10,18 +10,18 @@
                 "(4) Allemande left" ]
         },
         {
-            "section" : "A2",
+            "label" : "A2",
             "elements" : [
                 "(16) Partners balance and swing"]
         },
         {
-            "section" : "B1",
+            "label" : "B1",
             "elements" : [
                 "(8) Forward and back",
                 "(8) Forward and back, men turning to face partner on the way back" ]
         },
         {
-            "section" : "B2",
+            "label" : "B2",
             "elements" : [
                 "(4) Partners allemande left",
                 "(12) Partners promenade",

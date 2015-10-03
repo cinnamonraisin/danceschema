@@ -1,18 +1,18 @@
 {
     "moves": [
         {
-            "section" : "Part I"
+            "label" : "Part I"
         },
         {
-            "section" : "A",
+            "label" : "A",
             "elements" : [ "All forward double and back twice." ]
         },
         {
-            "section" : "B",
+            "label" : "B",
             "elements" : [ "All set and turn single twice." ]
         },
         {
-            "section" : "C",
+            "label" : "C",
             "elements" : [ 
                 "Partners lead away from the set, change hands and lead back;",
                 "All turn single cloverleaf.",
@@ -20,44 +20,43 @@
                 "All turn single cloverleaf. "]
         },
         {
-            "section" : "Part II"
+            "label" : "Part II"
         },
         {
-            "section" : "A",
+            "label" : "A",
             "elements" : [ "Partners side twice." ]
         },
         {
-            "section" : "B",
+            "label" : "B",
             "elements" : [ "Partners set and turn single twice." ]
         },
         {
-            "section" : "C",
+            "label" : "C",
             "elements" : [ "Repeat C of part I." ]
         },
         {
-            "section" : "Part III"
+            "label" : "Part III"
         },
         {
-            "section" : "A",
+            "label" : "A",
             "elements" : [ "Partners arm right and arm left." ]
         },
         {
-            "section" : "B",
+            "label" : "B",
             "elements" : [ "Partners set and turn single twice." ]
         },
         {
-            "section" : "C",
+            "label" : "C",
             "elements" : [ "Repeat C of part I." ]
         }
     ],
+    "tune" : {
+        "title" : "Rufty Tufty"
+    },
     "author": "Playford",
     "title": "Rufty Tufty",
-    "tune_source": "",
-    "meter": "",
     "source": "GCD Playford ball booklet, 2013",
     "formation": "2 couple set",
-    "key": "",
     "date": "1650",
-    "style": "english",
-    "tune": ""
+    "style": "english"
 }
