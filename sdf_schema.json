@@ -2,12 +2,36 @@
     "$schema": "http://json-schema.org/draft-04/schema#",
 
     "definitions" : {
+
+        "DanceMove" : {
+            "type" : "object",
+            "title" : "one dance element",
+            "properties" : {
+                "move" : {
+                    "type" : "string",
+                    "description" : "text of dance element"
+                },
+                "duration" : {
+                    "type" : "number",
+                    "description" : "length of element; units may be specified"
+                }
+            },
+            "required" : ["element"]
+        },
+
         "DanceSection" : {
             "type" : "object",
-            "title" : "dance moves section",
+            "title" : "a section of dance elements",
             "properties" : {
-                "label": { "type": "string" },
-                "elements": { "type": "array", "items": { "type": "string" } }
+                "label": { 
+                    "type": "string",
+                    "description" : "label for dance section, e.g. A, A1, B2. Can also be a separator"
+                },
+                "elements": { 
+                    "type": "array", 
+                    "items": { "$ref": "#/definitions/DanceMove" },
+                    "description" : "dance moves"
+                }
             },
             "required" : ["label"]
         },
@@ -67,7 +91,7 @@
         },
         "date" : { 
             "type": "string",
-            "date of composition of the dance, if known; could be specific date or general time period"
+            "description" : "date of composition of the dance, if known; could be specific date or general time period"
         },
         "authors_notes": { 
             "type": "string",

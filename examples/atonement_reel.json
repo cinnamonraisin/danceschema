@@ -3,29 +3,29 @@
         {
             "label" : "A1",
             "elements" : [
-                "Start in circular wave, right hand to partner, men facing out",
-                "(4) Balance the wave",
-                "(4) Allemande right 1/2 to a new wave (men facing in)",
-                "(4) Balance the wave",
-                "(4) Allemande left" ]
+                { "element" : "Start in circular wave, right hand to partner, men facing out" },
+                { "element" : "Balance the wave", "duration" : 4 },
+                { "element" : "Allemande right 1/2 to a new wave (men facing in)", "duration" : 4 },
+                { "element" : "Balance the wave", "duration" : 4 },
+                { "element" : "Allemande left", "duration" : 4 } ]
         },
         {
             "label" : "A2",
             "elements" : [
-                "(16) Partners balance and swing"]
+                { "element" : "Partners balance and swing", "duration" : 16 } ]
         },
         {
             "label" : "B1",
             "elements" : [
-                "(8) Forward and back",
-                "(8) Forward and back, men turning to face partner on the way back" ]
+                { "element" : "Forward and back", "duration" : 8 },
+                { "element" : "Forward and back, men turning to face partner on the way back", "duration" : 4 } ]
         },
         {
             "label" : "B2",
             "elements" : [
-                "(4) Partners allemande left",
-                "(12) Partners promenade",
-                "At end of promenade drop right hands, men face out, women face in" ]
+                { "element" : "allemande left", "duration" : 4 },
+                { "element" : "Partners promenade", "duration" : 12 },
+                { "element" : "At end of promenade drop right hands, men face out, women face in" } ]
         }
     ],
     "title": "Atonement Reel",
@@ -33,5 +33,5 @@
     "source": "http://www.quiteapair.us/calling/acdol/dance/acd_1.html",
     "authors_notes": "Written on October 11, 1997 on the way to the North Yarmouth dance. I announced that the dance had no name yet, whereupon David Handwerker reminded me it was the Yom Kippur, \"The Day of Atonement\".This dance borrows the promenade into circular wave balance from \"Ted's Mixer\" by Ted Sannella. I wanted the progression to be at the end so there was at least one balance and swing with the original partner.",
     "formation": "circle",
-    "style": "contra"
+    "genre": "contra"
 }
