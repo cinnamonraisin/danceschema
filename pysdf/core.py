@@ -12,7 +12,8 @@ Example of how to use this:
 >>> import pysdf
 >>> ex = pysdf.util.list_examples()
 >>> an_example = pysdf.load(ex[0])
->>>
+>>> an_example
+StructuredDance(title='Rufty Tufty')
 """
 
 from __future__ import print_function
@@ -23,7 +24,6 @@ import jsonschema
 import logging
 import pprint
 import six
-import warnings
 
 from .version import version as __VERSION__
 from . import schema
@@ -111,7 +111,10 @@ class StructuredDance(object):
             return True
         except jsonschema.ValidationError as e:
             logger.error(e)
-            return False
+            if strict:
+                raise SchemaError(e)
+            else:
+                return False
 
     def to_builtin(self):
         """Return this dance as a dict."""
