@@ -9,9 +9,12 @@ Much of this document / repo borrowed from
 https://github.com/marl/jams/blob/master/jams/core.py
 """
 
+from __future__ import print_function
+
+import copy
 import json
 import jsonschema
-
+import logging
 import six
 import warnings
 
@@ -19,7 +22,9 @@ from .version import version as __VERSION__
 from . import schema
 from .exceptions import sdfError, SchemaError, ParameterError
 
-__all__ = ['load', 'JSONObject', 'StructuredDance']
+__all__ = ['load', 'StructuredDance']
+
+logger = logging.getLogger(__name__)
 
 
 def load(path_or_file, validate=True, strict=True):
@@ -48,7 +53,7 @@ def load(path_or_file, validate=True, strict=True):
     SchemaError
         if `validate==True`, `strict==True` and validation fails
     """
-    with _open(path_or_file, mode='r') as fp:
+    with open(path_or_file, mode='r') as fp:
         sdf = StructuredDance(**json.load(fp))
 
     if validate:
@@ -57,12 +62,31 @@ def load(path_or_file, validate=True, strict=True):
     return sdf
 
 
-class JSONObject(object):
-    """Dict-like object for JSON Serialization.
-    """
-    pass
-
-
-class StructuredDance(JSONObject):
+class StructuredDance(object):
     """The Dance Container."""
-    pass
+    __SCHEMA__ = schema.SDF_SCHEMA
+
+    def __init__(self, **kwargs):
+        """
+        Parameters
+        ----------
+        kwargs : dict
+            The json k:v pairs
+        """
+        self.data = copy.deepcopy(kwargs)
+
+    def get(self, key, default=None):
+        return self.data.get(key, default)
+
+    def __getitem__(self, key):
+        return self.data.get(key)
+
+    def __getattr__(self, key):
+        return self.data.get(key)
+
+    def __setitem__(self, key, value):
+        self.data[key] = value
+
+    def validate(self, strict=True):
+        """Validate this object against the schema."""
+        jsonschema.validate(self.data, self.__SCHEMA__)
