@@ -1,5 +1,4 @@
 import os
-import pytest
 
 import pysdf
 
@@ -11,6 +10,12 @@ def test_parse_examples():
         assert os.path.exists(example_path)
         sdf = pysdf.load(example_path)
         assert isinstance(sdf, pysdf.StructuredDance)
+
+        assert isinstance(sdf.to_builtin(), dict)
+        assert isinstance(sdf.pformat(), str)
+        assert isinstance(str(sdf), str)
+        assert "StructuredDance" in str(sdf)
+        assert sdf.validate()
 
     for e in examples:
         yield __test_example, e

@@ -7,6 +7,12 @@ files into Python, or creating them programatically.
 
 Much of this document / repo borrowed from
 https://github.com/marl/jams/blob/master/jams/core.py
+
+Example of how to use this:
+>>> import pysdf
+>>> ex = pysdf.util.list_examples()
+>>> an_example = pysdf.load(ex[0])
+>>>
 """
 
 from __future__ import print_function
@@ -15,6 +21,7 @@ import copy
 import json
 import jsonschema
 import logging
+import pprint
 import six
 import warnings
 
@@ -87,6 +94,25 @@ class StructuredDance(object):
     def __setitem__(self, key, value):
         self.data[key] = value
 
+    def keys(self):
+        return self.data.keys()
+
+    def __repr__(self):
+        return "StructuredDance(title='{}')".format(
+            self['title'])
+
+    def pformat(self):
+        return pprint.pformat(self.data)
+
     def validate(self, strict=True):
         """Validate this object against the schema."""
-        jsonschema.validate(self.data, self.__SCHEMA__)
+        try:
+            jsonschema.validate(self.data, self.__SCHEMA__)
+            return True
+        except jsonschema.ValidationError as e:
+            logger.error(e)
+            return False
+
+    def to_builtin(self):
+        """Return this dance as a dict."""
+        return self.data
