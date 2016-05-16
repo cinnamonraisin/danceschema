@@ -2,6 +2,8 @@ danceschema
 ===========
 DanceSchema is JSON schema specification for the exchange of Structured "Traditional" Dances.
 
+[![Build Status](https://travis-ci.org/cinnamonraisin/danceschema.svg?branch=master)](https://travis-ci.org/cinnamonraisin/danceschema)
+
 We provide:
 * A formal JSON schema for generic structured dances.
 * Error detection and validation for dances. (TODO)
