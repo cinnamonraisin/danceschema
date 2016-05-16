@@ -4,19 +4,27 @@
     "definitions" : {
 
         "DanceMove" : {
-            "type" : "object",
-            "title" : "one dance element",
-            "properties" : {
-                "move" : {
-                    "type" : "string",
-                    "description" : "text of dance element"
+            "oneOf": [
+                {
+                    "type": "string",
+                    "description": "text of the dance element"
                 },
-                "duration" : {
-                    "type" : "number",
-                    "description" : "length of element; units may be specified"
+                {
+                    "type" : "object",
+                    "title" : "one dance element",
+                    "properties" : {
+                        "move" : {
+                            "type" : "string",
+                            "description" : "text of dance element"
+                        },
+                        "duration" : {
+                            "type" : "number",
+                            "description" : "length of element; units may be specified"
+                        }
+                    },
+                    "required" : ["element"]
                 }
-            },
-            "required" : ["element"]
+            ]
         },
 
         "DanceSection" : {
